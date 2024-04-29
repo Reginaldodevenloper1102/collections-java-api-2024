@@ -1,4 +1,4 @@
-package list.OperacoesBasicas.ordenacao.pesquisa;
+package list.OperacoesBasicas.ordenacao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,4 +57,18 @@ public class CatalagosLivros {
         return livroPorTitulo;
     }
 
+    public static void main(String[] args) {
+        CatalagosLivros catalagosLivros= new CatalagosLivros();
+        catalagosLivros.adicionarLivro("Livro 1","Autor 1", 2021);
+        catalagosLivros.adicionarLivro("Livro 1","Autor 2", 2021);
+        catalagosLivros.adicionarLivro("Livro 2","Autor 2", 2022);
+        catalagosLivros.adicionarLivro("Livro 3","Autor 3", 2023);
+        catalagosLivros.adicionarLivro("Livro 4","Autor 4", 1994);
+
+        System.out.println(catalagosLivros.pesquisarPorAutor("Autor 2"));
+        System.out.println(catalagosLivros.pesquisarPorIntervaloAnos(2020,2021));
+        System.out.println(catalagosLivros.pesquisarPorTitulo("Livro 1"));
+
+
+    }
 }
